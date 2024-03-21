@@ -1,0 +1,23 @@
+Package: rhinno
+Title: repository for high-throughput immune neural network objects
+Version: 0.99.0
+Authors@R: c(
+    person(given = "Nick", family = "Borcherding", role = c("aut", "cre"), email = "ncborch@gmail.com"))
+Description: rhinno is an experimentdata package containing Keras-based neural network models for the analysis of single-cell T-cell receptor and B-cell receptor sequences. The package is compatible with the scRepertoire ecosystem and includes models for generating latent dimensional space for single-cell repertoires and individual sequences. The latter models for sequence-level vectorization are used in the Ibex and Trex packages.
+License: MIT + file LICENSE 
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+biocViews: Software, ImmunoOncology, SingleCell, Sequencing
+Depends: R (>= 4.1)
+Suggests: 
+    BiocManager,
+    BiocStyle,
+    knitr,
+    rmarkdown,
+Imports: ExperimentHub
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+Language: en-US
+BugReports: https://github.com/ncborcherding/rhino/issues
+URL: https://github.com/ncborcherding/rhino

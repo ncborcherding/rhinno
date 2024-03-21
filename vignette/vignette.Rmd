@@ -1,0 +1,62 @@
+---
+title: Loading neural-network-based models with Rhinno
+author: 
+- name: Nick Borcherding
+  email: ncborch@gmail.com
+  affiliation: Washington University in St. Louis, School of Medicine, St. Louis, MO, USA
+
+date: 'Compiled: `r format(Sys.Date(), "%B %d, %Y")`'
+
+output:
+  BiocStyle::html_document:
+    toc_float: true
+package: escape
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Deep Learning Models with Rhinno}
+  %\VignetteEncoding{UTF-8} 
+---
+
+```{r, echo=FALSE, results="hide", message=FALSE}
+knitr::opts_chunk$set(error=FALSE, message=FALSE, warning=FALSE)
+library(BiocStyle)
+```
+
+Rhinno is an experimentdata package enabling the loading of pretrained keras-based models to to calculate the latent embeddings of single-cell immune repertoire data. The package itself loads the models for the [Trex](https://github.com/ncborcherding/Trex) TCR-based and [Ibex](https://github.com/ncborcherding/Ibex) BCR-based R packages. Please refer to these packages for more information.
+
+# Loading Packages
+
+```{r}
+suppressPackageStartupMessages(library(rhinno))
+suppressPackageStartupMessages(library(keras))
+```
+
+# Getting Immune Repertoire Models
+
+Loading of the neural-network models uses the ```loadRhino()``` function. 
+
+**package** The package the model will be used with - **Ibex** or **Trex**
+
+**chain** TCR or BCR chain to use - **TRA**, **TRB**, **Heavy**, or **Light**
+
+**encoder.model** The type of model architecture - autoencoder (**AE**) or variation autoencoder (**VAE**)
+
+**encoder.input** The method to transform the sequences - Atchley factors (**AF**), Kidera factors (**KF**), Atchley and Kidera factors (**both**), or One-Hot Encoder (**OHE**).
+
+```{r}
+Trex.TRB.OHE <- loadRhinno(package = "Trex",
+                          chain = "TRB",
+                          encoder.input = "OHE",
+                          encoder.model = "AE")
+```
+
+
+***
+
+# Conclusions
+
+If you have any questions, comments or suggestions, feel free to visit the [github repository](https://github.com/ncborcherding/escape) or [email me](mailto:ncborch@gmail.com).
+
+```{r}
+sessionInfo()
+```
