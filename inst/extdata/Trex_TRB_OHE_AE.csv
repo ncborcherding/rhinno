@@ -1,0 +1,2 @@
+"Title","Description","RDataPath","BiocVersion","Genome","SourceType","SourceUrl","SourceVersion","Species","TaxonomyId","Coordinate_1_based","DataProvider","Maintainer","RDataClass","DispatchClass"
+"Trex TRB OHE AE","Deep autoencoder for the TRB locus of the TCR using a one-hot encoding approach","rhinno/Trex_TRB_OHE_AE.h5","3.19",NA,"h5","https://github.com/Trex","blueprint_encode.rda","Homo sapiens","9606",NA,"Nick Borcherding","Nick Borcherding <ncborch@gmail.com>","h5","H5File"
