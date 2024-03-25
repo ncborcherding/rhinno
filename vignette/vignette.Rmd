@@ -51,6 +51,14 @@ Trex.TRB.OHE <- loadRhinno(package = "Trex",
 ```
 
 
+# Examining the Model
+
+More information on the individual model can be seen using the ```summary()``` keras function, inlcuding number of layers, shapes, and parameters.
+
+```{r}
+summary(Trex.TRB.OHE)
+```
+
 ***
 
 # Conclusions

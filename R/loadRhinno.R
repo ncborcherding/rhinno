@@ -5,9 +5,9 @@
 #' 
 #' @examples
 #'Trex.TRB.OHE <- loadRhinno(package = "Trex",
-#'                          chain = "TRB",
-#'                          encoder.input = "OHE",
-#'                          encoder.model = "AE")
+#'                           chain = "TRB",
+#'                           encoder.input = "OHE",
+#'                           encoder.model = "AE")
 #'                           
 #'                         
 #' @param package The package the model will be used with - \strong{Ibex}, 
