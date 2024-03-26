@@ -13,12 +13,12 @@ approach <- c(VAE = "Variational Autoencode", AE = "Autoencoder")
 lapply(model.names, function(x) {
   df <- data.frame(
     Title = x,
-    Description = paste0("Deep ",  as.vector(approach[strsplit(x, " ")[[1]][4]]), " for the ", strsplit(x, " ")[[1]][2], " using the ", strsplit(x, " ")[[1]][3], " transformation of sequences."),
+    Description = paste0("Deep ",  as.vector(approach[strsplit(x, " ")[[1]][4]]), " for the ", strsplit(x, " ")[[1]][2], " chain using the ", strsplit(x, " ")[[1]][3], " transformation of sequences."),
     RDataPath = file.path("rhinno", paste0(gsub(" ", "_", x), ".h5")),
     BiocVersion="3.19", 
     Genome=NA, 
     SourceType="HDF5", 
-    SourceUrl=ifelse(grepl("Trex", x), "https://github.com/Trex", "https://github.com/Ibex"),
+    SourceUrl=paste0("https://github.com/", strsplit(x, " ")[[1]][1]),
     SourceVersion="April 1 2024",
     Species="Homo sapiens",
     TaxonomyId="9606",
