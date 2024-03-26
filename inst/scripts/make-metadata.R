@@ -17,9 +17,9 @@ lapply(model.names, function(x) {
     RDataPath = file.path("rhinno", paste0(gsub(" ", "_", x), ".h5")),
     BiocVersion="3.19", 
     Genome=NA, 
-    SourceType="h5", 
+    SourceType="HDF5", 
     SourceUrl=ifelse(grepl("Trex", x), "https://github.com/Trex", "https://github.com/Ibex"),
-    SourceVersion="April 1, 2024",
+    SourceVersion="April 1 2024",
     Species="Homo sapiens",
     TaxonomyId="9606",
     Coordinate_1_based=NA,
@@ -33,4 +33,4 @@ lapply(model.names, function(x) {
 
 meta.data <- do.call(rbind, meta.list)
 
-write.csv(file="./inst/extdata/metadata.csv", df, row.names=FALSE)
+write.csv(file="./inst/extdata/metadata.csv", meta.data, row.names=FALSE)
