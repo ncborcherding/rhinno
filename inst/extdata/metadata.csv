@@ -1,0 +1,2 @@
+"Title","Description","RDataPath","BiocVersion","Genome","SourceType","SourceUrl","SourceVersion","Species","TaxonomyId","Coordinate_1_based","DataProvider","Maintainer","RDataClass","DispatchClass"
+"Trex TRB OHE AE","Deep Autoencoder for the TRB using the OHE transformation of sequences.","rhinno/Trex_TRB_OHE_AE.h5","3.19",NA,"h5","https://github.com/Trex","April 1, 2024","Homo sapiens","9606",NA,"Nick Borcherding","Nick Borcherding <ncborch@gmail.com>","h5","H5File"
