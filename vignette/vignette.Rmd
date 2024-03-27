@@ -33,9 +33,13 @@ suppressPackageStartupMessages(library(keras))
 
 # Getting Immune Repertoire Models
 
-Loading of the neural-network models uses the ```loadRhino()``` function. 
+```{r echo=FALSE, fig.align = "center"}
+knitr::include_graphics("./www/models.png")
+```
 
-**package** The package the model will be used with - **Ibex** or **Trex**
+There are currently 32 different models available in in the rhinno package that have been trained on TCR or BCR data. These models vary by **encoder.model** and **encoder.input** but follow the above architectures. Loading of the neural-network models uses the ```loadRhino()``` function. 
+
+**package** The package the model will be used with - **Ibex** for BCRs or **Trex** for TCRs
 
 **chain** TCR or BCR chain to use - **TRA**, **TRB**, **Heavy**, or **Light**
 
