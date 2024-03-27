@@ -37,7 +37,7 @@ suppressPackageStartupMessages(library(keras))
 knitr::include_graphics("./www/models.png")
 ```
 
-There are currently 32 different models available in in the rhinno package that have been trained on TCR or BCR data. These models vary by **encoder.model** and **encoder.input** but follow the above architectures. Loading of the neural-network models uses the ```loadRhino()``` function. 
+There are currently 32 different models available in in the rhinno package that have been trained on TCR or BCR data. These models vary by **encoder.model**, **encoder.input**, and **chain** but follow the above architectures. Loading of the neural-network models uses the ```loadRhino()``` function. 
 
 **package** The package the model will be used with - **Ibex** for BCRs or **Trex** for TCRs
 
@@ -53,7 +53,6 @@ Trex.TRB.OHE <- loadRhinno(package = "Trex",
                           encoder.input = "OHE",
                           encoder.model = "AE")
 ```
-
 
 # Examining the Model
 
