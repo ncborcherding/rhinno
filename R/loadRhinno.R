@@ -45,7 +45,7 @@ loadRhinno <- function(package = NULL,
   
   select  <- system.file("extdata", paste0(package, "_", chain, "_", 
                                            encoder.input, "_", encoder.model, ".h5"), 
-                         package = "Rhino")
+                         package = "rhinno")
   model <- quiet(load_model_hdf5(select, compile = FALSE))
   return(model)
 }
