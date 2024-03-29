@@ -26,9 +26,9 @@
 #' 
 #' @return keras encoder for further analysis
 loadRhinno <- function(package = NULL, 
-                      chain = NULL, 
-                      encoder.input = NULL, 
-                      encoder.model = NULL) {
+                       chain = NULL, 
+                       encoder.input = NULL, 
+                       encoder.model = NULL) {
   
   if(any(is.null(c(package, chain, encoder.input, encoder.model)))) {
     stop("Please ensure there is input values for package, chain, encoder.input, and encoder.model parameters")
@@ -38,7 +38,7 @@ loadRhinno <- function(package = NULL,
     stop("The chain argument should have either 'TRA', 'TRB', 'Heavy', or 'Light'")
   }
   
-  if(package %in% c("Trex", "Ibex") & encoder.input %in% ("AF", "KF", "both", "OHE")) {
+  if(package %in% c("Trex", "Ibex") & encoder.input %in% c("AF", "KF", "both", "OHE")) {
     stop("For Trex and Ibex models, please use 'AF', 'KF', 'both', or 'OHE' for encoder.inputs.")
   }
   
